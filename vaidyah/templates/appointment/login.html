@@ -1,0 +1,175 @@
+<html>
+<head>
+  <!DOCTYPE html>
+<title>Vaidyah|Martial Himanshu</title>
+  <!-- {% load staticfiles %} -->
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<!-- user defined stylesheet -->
+<link rel="stylesheet" type="text/css" href="static/css/">
+
+<!-- font family -->
+<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
+
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top"">
+    <div class="container-fluid">
+      <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{% url 'appointment:index' %}">
+                <!-- <i class="fa fa-heartbeat" style="font-size:36px;color:red"> -->
+              <span style="color: red;font-size: 45; font-family: Baumans" area-hidden="true">Vaidyah</span></i>
+              </a>
+      </div>
+      <div class="collapse navbar-collapse" id="topNavBar">
+        <ul class="nav navbar-nav">
+          
+          <!-- <li><a class="navbar-link" href="#">
+              <i class="fa fa-stethoscope" style="font-size: 28px;">
+                <span style="font-size:22px;font-family: Baumans">Meet Doctor</span>
+                </i>
+            </a>
+          </li> -->
+          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+      
+          <li><a class="navbar-link" href="/blog" data-toggle="tooltip" data-placement="bottom" title="Check Out our blog">
+            <i <i class="fa fa-plus-square" style="font-size: 28px;">
+            <span style="font-size:22px;font-family: Baumans"> Health Blog</span></i>
+            </a>
+          </li>
+                    
+               </ul>
+      </div>
+      
+    </div>
+  </nav>
+
+  <!-- visitor body tags -->
+  <div class="loginback">
+<div class="tint">
+
+
+
+
+
+</div>
+
+<div class="col-md-6 col-lg-8">
+
+
+<div class="col-md-9">
+<h1>Let's make a easier way to get <br>connected with nearby Doctor's!</h1>
+</div>
+
+
+
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="login">
+
+<div class="logincont">
+<form class="formlogin form1" autocomplete="on" action="{% url 'appointment:login' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+<h1>Login</h1>
+<div class="form-group">
+<input type="text" placeholder="Email or username" name="username">
+<input type="password" placeholder="Password" name="password">
+
+</div>
+    <div class="form-group">
+    <button type="submit" class="btn btn-success">Login Now </button>
+    </div>
+    <div class="form-group" id="sociallogin">
+
+    
+
+<a class="flaticon-facebook" id="facebook_login" href="#"></a>
+    <a class="flaticon-google-plus" id="google_login" href=""></a>
+    <a class="flaticon-linkedin" href="#"></a>
+
+    <a class="" href="#"></a>
+
+    </div>
+</form>
+
+<a href="{% url 'appointment:register' %}">Or Sign Up</a>
+
+
+
+    
+<!--
+<span class="success">Passwords Matched Successfully !</span><span class="error">Passwords didn't matched </span>
+
+-->
+
+<!-- </div>
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary">Sign Up Now</button>
+    </div>
+    <div class="divider">
+    <h3>or</h3>
+
+    </div>
+    <div class="form-group" id="sociallogin1">
+        <span>Sign Up using</span>
+    <a class="flaticon-facebook"></a>
+    <a class="flaticon-google-plus"></a>
+    <a class="flaticon-linkedin"></a>
+
+
+    </div> -->
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+  
+
+  <!---############ Footer-division ##############3 -->
+
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://github.com/Martialhimanshu">Follow on Github</a>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a class="navbar-link" href="#">About</a></li>
+          <li><a class="navbar-link" href="{% url 'appointment:help' %}">Help</a></li>
+      
+    </div>
+    
+  </div>
+</nav>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+</body>
+</html>
+

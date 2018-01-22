@@ -1,0 +1,32 @@
+{% extends 'appointment/base.html' %}
+
+{% block body %}
+<div class="jumbotron" style="height: 250px;">
+			<div class="col-md-3">		
+	            {% if doctor.photo.url %}
+	                <img src="{{ doctor.photo.url }}" class="col-md-3 img-thumbnail" alt="Cinque Terre" width="200" height="180" style="margin-left:0px;">
+	            {% else %}
+	                <img src="static/images/doctor.png" class="col-md-3 img-thumbnail" alt="Cinque Terre" width="200" height="180" style="margin-left:0px;">
+	            {% endif %}
+	            </div>
+			
+			<div class="col-md-6">
+				<h2>{{ doctor.name }}</h2>
+				<span>{{ doctor.qualification }}</span>
+				<p>{{ doctor.experience }}<span> years experience</span></p>
+				<p>{{ doctor.specialization }}</p>
+			</div>
+			<div class="col-md-3">
+				<p><span class="fa fa-star checked" style="font-size:15px"></span> {{ doctor.rating }}</p>
+				<p><span class="fa fa-map-marker" style="font-size:20px"></span> {{ doctor.location }}</p>
+				<p><span class="fa fa-inr" style="font-size:20px"></span> {{ doctor.fees }}</p>
+				<a  href="#"><button class="col col-md-12 btn btn-success">Book Appointment</button></a>
+			</div>
+</div>
+<div class="jumbotron" style="height: 500px;">
+	<h2>Info</h2>
+	<p>{{doctor.location}}</p>
+	<p>{{doctor.about}}</p>
+	
+</div>
+{% endblock %}

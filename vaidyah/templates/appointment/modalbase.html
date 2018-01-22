@@ -1,0 +1,137 @@
+<html>
+<head>
+  <!DOCTYPE html>
+<title>Vaidyah|Martial Himanshu</title>
+  <!-- {% load staticfiles %} -->
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<!-- user defined stylesheet -->
+<link rel="stylesheet" type="text/css" href="static/css/">
+
+<!-- font family -->
+<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
+
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top"">
+    <div class="container-fluid">
+      <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{% url 'appointment:index' %}">
+                <!-- <i class="fa fa-heartbeat" style="font-size:36px;color:red"> -->
+              <span style="color: red;font-size: 45; font-family: Baumans" area-hidden="true">Vaidyah</span></i>
+              </a>
+      </div>
+      <div class="collapse navbar-collapse" id="topNavBar">
+        <ul class="nav navbar-nav">
+          
+          <!-- <li><a class="navbar-link" href="#">
+              <i class="fa fa-stethoscope" style="font-size: 28px;">
+                <span style="font-size:22px;font-family: Baumans">Meet Doctor</span>
+                </i>
+            </a>
+          </li> -->
+          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="navbar-link" href="#">
+            <i <i class="fa fa-plus-square" style="font-size: 28px;">
+            <span style="font-size:22px;font-family: Baumans"> Health Blog</span></i>
+            </a>
+          </li>
+                    <li>
+                        <button class="btn btn-default" href="#" style="margin: 10px;">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:18px;"></span>&nbsp; Login
+                        </button>
+                    </li>
+               </ul>
+      </div>
+      
+    </div>
+  </nav>
+
+  <!-- visitor body tags -->
+  <div class="container-fluid">
+       <div class="container">
+        <div class="col-sm-8 col-md-6 col-lg-6">
+          <img src="media/media/doctors.png">
+        </div>
+        <div class="col-md-6">
+          <h2 style="text-align: center;margin-top: 150px;font-stretch: initial;font-size: 5em;">Doctor's Near By On <span style="font-size:36px;color:red">
+      <span style="color: red;font-size: 80; font-family: Baumans" area-hidden="true">Vaidyah.</span></h2>
+      
+        <div class="col-md-12" style="margin-left:190px;padding: 5px;">
+          <a href="{% url 'appointment:register' %}">
+          <button class="btn btn-default" data-toggle="modal" data-target=#regform>
+            <span>Register Now</span>
+          </button></a>
+
+           <div class="modal fade" id="regform" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    
+                      <h4 class="modal-title" align="center">Your Doctor. Everywhere. For Free</h4>
+                    <div>
+                      <a class="navbar-brand" href="{% url 'appointment:index' %}">
+                    <i class="fa fa-heartbeat" style="font-size:36px;color:red;object-position: : center;">
+              <span style="color: red;font-size: 25; font-family: Baumans" area-hidden="true">Vaidyah</span></i>
+                    </a>
+                    </div>
+                  </div>
+                  <div class="modal-body">
+                    <p>Register/Create a New Account</p>
+                    {% if error_message %}
+                    <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" method="post" action="" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      {% include 'appointment/form-template.html' %}
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <div class="checkbox">
+                            <label><input type="checkbox" name="remember">Remember Me</label>
+                          </div>
+                          
+                        </div>
+                        
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <a href="#">
+                          <button type="submit" class="btn btn-success">Submit</button></a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+<!--                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div> -->
+                </div>
+                
+              </div>
+            </div>
+        </div>
+      
+        </div>
+        
+       </div>
+  </div>
+
+</body>
+</html>

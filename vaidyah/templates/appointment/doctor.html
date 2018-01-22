@@ -1,0 +1,36 @@
+{% extends 'appointment/base.html' %}
+
+{% block body %}
+	<div class="container">
+	{% for doctor in doctors %}
+	<div class="card bg-light text-dark">
+		<div class="card-body">
+				<div class="col-md-3">		
+	            {% if doctor.photo.url %}
+	                <img src="{{ doctor.photo.url }}" class="col-md-3 img-thumbnail" alt="Cinque Terre" width="200" height="180" style="margin-left:0px;">
+	            {% else %}
+	                <img src="static/images/doctor.png" class="col-md-3 img-thumbnail" alt="Cinque Terre" width="200" height="180" style="margin-left:0px;">
+	            {% endif %}
+	            </div>
+			
+			<div class="col-md-6">
+				<a href="{% url 'appointment:detail' doctor.id %}"><h2>{{ doctor.name }}</h2></a>
+				<p>{{ doctor.qualification }}</p>
+				<p style="font-size:15px">{{ doctor.experience }}<span> years experience</span></p>
+				<p style="font-size:15px">{{ doctor.specialization }}</p>
+			</div>
+			<div class="col-md-3">
+				<p style="font-size:15px"><span class="fa fa-star checked" style="font-size:15px"></span> {{ doctor.rating }}</p>
+				<p style="font-size:15px"><span class="fa fa-map-marker" style="font-size:20px"></span> {{ doctor.location }}</p>
+				<p style="font-size:15px"><span class="fa fa-inr" style="font-size:20px"></span> {{ doctor.fees }}</p>
+				
+			</div>
+		</div>
+	</div>
+	<hr>
+</hr>
+	{% endfor %}
+</div>
+
+	
+{% endblock %}

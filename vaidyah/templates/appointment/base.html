@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vaidyah|Martial Himanshu</title>
+	<!-- {% load staticfiles %} -->
+		 <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+
+<!-- user defined stylesheet -->
+<link rel="stylesheet" type="text/css" href="static/css/">
+
+<!-- font family -->
+<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-md bg-light navbar-light">
+		
+				<a class="navbar-brand" href="{% url 'appointment:alldoctor' %}">
+	            	<i class="fa fa-heartbeat" style="font-size:36px;color:red">
+							<span style="color: red;font-size: 25; font-family: Baumans" area-hidden="true">Vaidyah</span></i>
+	            </a>
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+	                <span class="navbar-toggler-icon"></span>
+	                
+	            </button>
+	            
+			</div>
+			<div class="collapse navbar-collapse" id="topNavBar">
+				<ul class="nav navbar-nav">
+					
+					<li><a class="navbar-link" style="color: black" href="#">
+							<i class="fa fa-stethoscope" style="font-size: 28px;">
+								<span style="font-size:22px;font-family: Baumans">Meet Doctor</span>
+								</i>
+						</a>
+					</li>
+					<li><a class="navbar-link" style="color: black" href="/blog" data-toggle="tooltip" data-placement="bottom" title="Check Out our blog">
+						<i <i class="fa fa-plus-square" style="font-size: 28px;">
+						<span style="font-size:22px;font-family: Baumans"> Health Blog</span></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="{% url 'appointment:Logout' %}">
+		                    <button class="btn btn-default" style="margin: 10px;">
+		                        <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:18px;"></span>&nbsp; Logout
+		                   	</button></a>
+		                </li>
+	               
+	                <li>
+	                    <!-- <a href="#"> -->
+	                        <!-- <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; Logout -->
+	                        <!-- <div class="chip">
+  								<img src="static/images/man.png" alt="" width="96" height="96">
+  								{{ user.name }}hi
+							</div>
+	                    </a> -->
+	                </li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>
+	<div class="container-fluid">
+       <!-- <div id="detail" class="form-group"></div> -->
+	    {% block body %}
+	    {% endblock %}
+	</div>
+	<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
