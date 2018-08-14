@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User,Permission
-from datetime import datetime,timezone
+from datetime import datetime
 from django.core.validators import MaxValueValidator
 
 # Create your models here.
