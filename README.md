@@ -16,7 +16,7 @@ This project mainly build using following technologies:
 7. Django
 8. Server:
 9. AWS
-10. git
+10. git(Github)
 
 Vaidyah consist following modules:
 1. Registration Page(Sign Up)
