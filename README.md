@@ -14,7 +14,7 @@ This project mainly build using following technologies:
 5. Ajax
 6. Javascript
 7. Django
-8. Server:
+8. Server: Nginx
 9. AWS
 10. git(Github)
 
