@@ -7,21 +7,17 @@ project, but for now I am contributing to it time to time. The idea behind this 
 5. List of doctor with detailed information(Fees, ratings, experience, location, Specialization of field, comments)
 
 This project mainly build using following technologies:
-1.Backend:
-   Python programming
-2.Database:
-   MySql(ORM)
-3.Front-end:
-   HTML
-   Bootstrap
-   Ajax
-   Javascript
-4.Framework:
-   Django
-5.Server:
-   AWS
-6.git:
-   Github
+1. Python programming
+2. MySql(ORM)
+3. HTML
+4. Bootstrap
+5. Ajax
+6. Javascript
+7. Framework:
+8. Django
+9. Server:
+10. AWS
+11. git
 
 Vaidyah consist following modules:
 1. Registration Page(Sign Up)
