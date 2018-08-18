@@ -13,11 +13,10 @@ This project mainly build using following technologies:
 4. Bootstrap
 5. Ajax
 6. Javascript
-7. Framework:
-8. Django
-9. Server:
-10. AWS
-11. git
+7. Django
+8. Server:
+9. AWS
+10. git
 
 Vaidyah consist following modules:
 1. Registration Page(Sign Up)
