@@ -1,10 +1,10 @@
 #!/bin/bash
 
 NAME="vaidyah"                                   # Name of the application
-DJANGODIR=/home/martial/diseno/webpy/vaidyah        # Django project directory
-SOCKFILE=/home/martial/diseno/webpy/venv/run/gunicorn.sock  # we will communicte using this unix socket
-USER=martial                                         # the user to run as
-GROUP=martial                                        # the group to run as
+DJANGODIR=/home/ubuntu/webpy/vaidyah        # Django project directory
+SOCKFILE=/home/ubuntu/webpy/venv/run/gunicorn.sock  # we will communicte using this unix socket
+USER=ubuntu                                         # the user to run as
+GROUP=ubuntu                                        # the group to run as
 NUM_WORKERS=3                                       # how many worker processes should Gunicorn spawn
 DJANGO_SETTINGS_MODULE=vaidyah.settings            # which settings file should Django use
 DJANGO_WSGI_MODULE=vaidyah.wsgi                # WSGI module name
@@ -13,7 +13,7 @@ echo "Starting $NAME as `whoami`"
 # Activate the virtual environment
 
 cd $DJANGODIR
-source /home/martial/diseno/webpy/venv/bin/activate
+source /home/ubuntu/webpy/venv/bin/activate
 export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 

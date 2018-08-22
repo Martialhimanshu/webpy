@@ -28,7 +28,7 @@ SECRET_KEY = 'babo96)483(tbsr)=mqz!4#8_mz)#4l!8)uji!9!m2fd$_l-k+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
